@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+$font-family: 'Red Hat Display', sans-serif;
+
+//colors
+
+$teal: hsla(192, 37%, 48%, 1);
+$light-teal: hsla(192, 54%, 64%, 1);
+$blue: hsla(192, 90%, 77%, 1);
+$purple: hsla(268, 34%, 53%, 1);
+$light-purple: hsla(268, 55%, 71%, 1);
+$periwinkle: hsla(268, 100%, 86%, 1);
+$black: hsla(240, 21%, 20%, 1);
+$white: hsla(0, 0%, 98%, 1);
+$gray: hsla(240, 10%, 57%, 1);
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  font-family: $font-family;
+  background-color: $white;
+  min-height: 100vh;
+  text-align: center;
+
+  // display: grid;
+  // grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  //   display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+//typography
+
+h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  color: $black;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  color: $black;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  color: $black;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: $gray;
+}
+
+.eyebrow {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: $teal;
+}
+
+//buttons
+
+.btn {
+  font: inherit;
+  border: none;
+  border-radius: 1.813rem;
+  padding: 1.2rem;
+  color: $white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn--teal {
+  background-color: $teal;
+  &:hover,
+  &:active {
+    background-color: $light-teal;
+  }
+
+  .btn-span {
+    color: $blue;
+  }
+}
+
+.btn--purple {
+  background-color: $purple;
+  &:hover,
+  &:active {
+    background-color: $light-purple;
+  }
+  .btn-span {
+    color: $periwinkle;
+  }
+}
+
+//number dividers
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.divider--2 {
+  margin: 0 0 -1.6rem;
+}
+.divider-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid hsla(240, 10%, 57%, 0.25);
+  background-color: $white;
+  opacity: 1;
+  z-index: 10;
+  mix-blend-mode: normal;
+
+  span {
+    opacity: 0.25;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 900;
+  }
+}
+
+.divider-line {
+  height: 5rem;
+  hr {
+    width: 1px;
+    height: 5rem;
+    background: $gray;
+    margin: 0;
+    opacity: 0.25;
+    border: none;
+  }
+}
+
+//****LAYOuT *****
+.logo {
+  text-align: center;
+  padding: 2rem;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110%;
+  margin: 0 0 0 -1.35rem;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem 3.5rem 0 3.5rem;
+
+  * {
+    margin-bottom: 2rem;
+  }
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.grid-img {
+  border-radius: 0.5rem;
+}
+
+.sub-header--content {
+  padding: 2rem;
+  * {
+    margin-bottom: 2rem;
+  }
+}
+
+footer {
+  padding: 5rem 2rem 2rem 2rem;
+  background: linear-gradient(
+      to top,
+      hsla(192, 37%, 48%, 0.8),
+      hsla(192, 37%, 48%, 0.8)
+    ),
+    url('../assets/mobile/image-footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  * {
+    color: $white;
+    margin-bottom: 2rem;
+  }
+}
