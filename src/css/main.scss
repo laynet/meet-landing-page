@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
 
+$tablet: 760px;
+
 $font-family: 'Red Hat Display', sans-serif;
 
 //colors
@@ -196,9 +198,16 @@ p {
 .hero-content {
   text-align: center;
   padding: 2rem 3.5rem 0 3.5rem;
-
   * {
     margin-bottom: 2rem;
+  }
+}
+
+.hero-text {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline-block;
   }
 }
 
@@ -206,6 +215,15 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: center;
+
+    .btn--teal {
+      margin-right: 2rem;
+    }
+  }
 }
 .photo-grid {
   display: grid;
@@ -214,6 +232,12 @@ p {
   gap: 1rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
+
+  @media (min-width: $tablet) {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    // margin-bottom: 0;
+  }
 }
 .grid-img {
   border-radius: 0.5rem;
@@ -224,10 +248,19 @@ p {
   * {
     margin-bottom: 2rem;
   }
+
+  @media (min-width: $tablet) {
+    padding: 0 4rem 4rem 4rem;
+  }
 }
 
-footer {
-  padding: 5rem 2rem 2rem 2rem;
+.sub-header--title {
+  @media (min-width: $tablet) {
+    padding: 0 10rem 0 10rem;
+  }
+}
+
+.footer-container {
   background: linear-gradient(
       to top,
       hsla(192, 37%, 48%, 0.8),
@@ -237,8 +270,36 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
 
-  * {
+  @media (min-width: $tablet) {
+    background: linear-gradient(
+        to top,
+        hsla(192, 37%, 48%, 0.8),
+        hsla(192, 37%, 48%, 0.8)
+      ),
+      url('../assets/tablet/image-footer.jpg');
+  }
+
+  *:not(:last-child) {
     color: $white;
     margin-bottom: 2rem;
+  }
+
+  .footer-content {
+    padding: 5rem 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      @media (min-width: $tablet) {
+        width: 50%;
+      }
+    }
+    p {
+      @media (min-width: $tablet) {
+        width: 85%;
+      }
+    }
   }
 }
