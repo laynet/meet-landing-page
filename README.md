@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-mobile-first-landing-page-using-css-grid-and-flex-svnvscVh_l)
 - Live Site URL: [Deployed with Netlify](https://transcendent-queijadas-95f514.netlify.app/)
 
 ## My process
